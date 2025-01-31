@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #130739;
+    --foreground: #802EFF;
+
+    --primary: #FFFFFF;
+    --accent: #A164FF;
+    --secondary: rgba(255, 255, 255, 0.50);
+    --tertiary: rgba(255, 255, 255, 0.25);
+
+    --tile: rgba(179, 119, 255, 0.20);
+    --card: linear-gradient(90deg, rgba(163, 46, 255, 0.12) 0%, rgba(80, 70, 197, 0.12) 100%);
+
+    --shopee-color: #EE4E2C;
+    --lazada-color: #0F136B;
+    --h-and-m-color: #CE0F25;
+    --fave-color: #DE206A;
+    --uniqlo-color: #F5F5F5;
+    --amazon-sg-color: #FFFFFF;
+    --fair-price-color: #0D3578;
+}

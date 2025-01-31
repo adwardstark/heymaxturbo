@@ -1,0 +1,11 @@
+@import url('../../../../packages/ui/dist/index.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: var(--primary);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}

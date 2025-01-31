@@ -1,0 +1,21 @@
+{
+  "name": "heymax-turborepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "check-types": "turbo check-types"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
