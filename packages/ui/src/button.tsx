@@ -1,45 +1,48 @@
-import { cva  } from "class-variance-authority"
-import type {VariantProps} from "class-variance-authority";
 import React from "react";
+import { cva } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+import { cn } from "./cn";
 
-const buttonStyles = cva("flex items-center justify-center rounded-full transition-colors", {
-  variants: {
-    variant: {
-      primary: "bg-foreground text-white hover:bg-accent",
-      secondary: "bg-purple-100 text-purple-900 hover:bg-purple-200",
+const buttonVariants = cva(
+  "flex items-center justify-center rounded-full transition-colors",
+  {
+    variants: {
+      variant: {
+        primary: "bg-accent text-primary hover:opacity-90",
+        outline: "border-accent border-2 text-accent hover:bg-purple-200",
+      },
+      size: {
+        default: "h-12 px-6 py-2",
+        icon: "h-10 w-10 p-4",
+      },
     },
-    size: {
-      default: "h-12 px-6 py-2",
-      large: "h-14 px-8 py-3",
+    defaultVariants: {
+      variant: "primary",
+      size: "default",
     },
-  },
-  defaultVariants: {
-    variant: "primary",
-    size: "default",
-  },
-})
-
-export interface ButtonProps extends VariantProps<typeof buttonStyles> {
-  children: React.ReactNode
-  onPress?: () => void
-  href?: string
-}
-
-// Web Button
-export function Button({ variant, size, children, href, ...props }: ButtonProps) {
-  const className = buttonStyles({ variant, size })
-
-  if (href) {
-    return (
-      <a href={href} className={className} {...props}>
-        {children}
-      </a>
-    )
   }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants>;
+
+function Button({
+  className,
+  variant,
+  size,
+  children,
+  ...props
+}: ButtonProps) {
 
   return (
-    <button className={className} {...props}>
+    <button
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    >
       {children}
     </button>
-  )
+  );
 }
+
+export { Button, buttonVariants };
+export type { ButtonProps };

@@ -9,6 +9,7 @@
     "dist"
   ],
   "exports": {
+    "./cn": "./src/cn.ts",
     "./styles.css": "./dist/index.css",
     "./tailwind.config.ts": "./tailwind.config.ts",
     "./button": "./src/button.tsx"
