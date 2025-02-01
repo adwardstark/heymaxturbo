@@ -1,6 +1,6 @@
 import React from "react"
 
-const NotFlyingSoonSvg = (props) => (
+const NotFlyingSoonSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     width={60}
     height={41}

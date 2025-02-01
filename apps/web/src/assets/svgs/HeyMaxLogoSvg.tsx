@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeyMaxLogoSvg = (props) => (
+const HeyMaxLogoSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     width={149}
     height={25}

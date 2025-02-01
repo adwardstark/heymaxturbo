@@ -1,6 +1,6 @@
 import React from "react"
 
-const FlyAndClaimSvg = (props) => (
+const FlyAndClaimSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     width={60}
     height={60}

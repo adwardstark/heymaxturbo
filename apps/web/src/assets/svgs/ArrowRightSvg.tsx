@@ -1,6 +1,6 @@
 import React from "react";
 
-const ArrowRightSvg = (props) => (
+const ArrowRightSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg width={24} height={24} viewBox="0 0 24 24" fill="none" {...props}>
     <path
       fill="#fff"

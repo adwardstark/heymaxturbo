@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShopeeSvg = (props) => (
+const ShopeeSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     width={114}
     height={36}

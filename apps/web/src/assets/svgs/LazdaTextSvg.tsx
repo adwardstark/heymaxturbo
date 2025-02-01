@@ -1,6 +1,6 @@
 import React from "react";
 
-const LazdaTextSvg = (props) => (
+const LazdaTextSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     width={46}
     height={11}

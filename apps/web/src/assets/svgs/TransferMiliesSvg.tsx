@@ -1,6 +1,6 @@
 import React from "react"
 
-const TransferMiliesSvg = (props) => (
+const TransferMiliesSvg = (props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
   <svg
     width={60}
     height={60}

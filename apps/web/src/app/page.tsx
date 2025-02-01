@@ -2,6 +2,7 @@
 
 import { useCallback, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperRef } from "swiper";  
 import "swiper/css";
 
 import { Button } from "@package/ui/button";
@@ -12,7 +13,7 @@ import ChooseYourBrandsPage from "@/components/ChooseYourBrandsPage";
 import PageIndicator from "@/components/PageIndicator";
 
 export default function Home() {
-  const swiperRef = useRef<Swiper | null>(null);
+  const swiperRef = useRef<SwiperRef | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const renderCTA = useCallback(() => {
