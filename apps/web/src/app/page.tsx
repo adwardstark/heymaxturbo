@@ -1,17 +1,69 @@
+"use client";
+
+import { useCallback, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+import { Button } from "@package/ui/button";
 import ArrowRightSvg from "@/assets/svgs/ArrowRightSvg";
 import LandingPage from "@/components/LandingPage";
-import { Button } from "@package/ui/button";
+import RedeemYourTripPage from "@/components/RedeemYourTripPage";
+import ChooseYourBrandsPage from "@/components/ChooseYourBrandsPage";
 
 export default function Home() {
+  const swiperRef = useRef<Swiper | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const renderCTA = useCallback(() => {
+    if (activeIndex === 1) {
+      return (
+        <Button
+          size="icon"
+          onClick={() => swiperRef?.current?.slideNext()}
+        >
+          <ArrowRightSvg />
+        </Button>
+      );
+    }
+
+    if (activeIndex === 2) {
+      return (
+        <Button onClick={() => window.open("https://heymax.ai", "_blank")}>
+          Get started
+        </Button>
+      );
+    }
+
+    return (
+      <Button onClick={() => swiperRef?.current?.slideNext()}>
+        See how it works <ArrowRightSvg height={16} width={16} className="ml-1" />
+      </Button>
+    );
+  }, [activeIndex]);
 
   return (
     <div className="min-h-screen items-center sm:mx-16 md:mx-40 lg:mx-56 xl:mx-96">
-      <LandingPage />
+      <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        slidesPerView={1}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      >
+        <SwiperSlide>
+          <LandingPage />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ChooseYourBrandsPage />
+        </SwiperSlide>
+        <SwiperSlide>
+          <RedeemYourTripPage />
+        </SwiperSlide>
+      </Swiper>
+
       {/** Controls */}
       <div className="row-span-1 py-8 self-end justify-self-end pr-12">
-        <Button>
-          See how it works <ArrowRightSvg />
-        </Button>
+        {renderCTA()}
       </div>
     </div>
   );

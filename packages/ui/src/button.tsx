@@ -9,11 +9,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "bg-accent text-primary hover:opacity-90",
-        outline: "border-accent border-2 text-accent hover:bg-purple-200",
+        outline: "border-accent border-2 text-accent hover:bg-accent hover:text-primary",
       },
       size: {
         default: "h-12 px-6 py-2",
-        icon: "h-10 w-10 p-4",
+        icon: "h-12 w-20 p-4",
       },
     },
     defaultVariants: {
