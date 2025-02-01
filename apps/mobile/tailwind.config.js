@@ -13,5 +13,10 @@ export default {
         interBold: ["Inter_700Bold"],
       },
     },
+    colors: {
+      mobile: {
+        background: "var(--mobile-background)",
+      },
+    },
   },
 };

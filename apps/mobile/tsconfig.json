@@ -3,10 +3,12 @@
   "compilerOptions": {
     "strict": true,
     "types": ["nativewind/types"],
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "./assets/*"]
     }
   },
-  "include": ["src", "*.ts", "*.js", "nativewind-env.d.ts"],
+  "include": ["src", "assets", "*.ts", "*.js", "nativewind-env.d.ts"],
   "exclude": ["node_modules"]
 }
