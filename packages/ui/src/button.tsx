@@ -1,6 +1,7 @@
 import React from "react";
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
+import { Pressable } from "react-native";
 import { cn } from "./cn";
 
 const buttonVariants = cva(
@@ -23,9 +24,11 @@ const buttonVariants = cva(
   }
 );
 
+// Web button props
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants>;
 
+// Web button component
 function Button({
   className,
   variant,
@@ -44,5 +47,28 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
-export type { ButtonProps };
+// Mobile button props
+type MobileButtonProps = React.ComponentPropsWithoutRef<typeof Pressable> &
+  VariantProps<typeof buttonVariants>;
+
+// Mobile button component
+const MobileButton = React.forwardRef<
+  React.ElementRef<typeof Pressable>,
+  MobileButtonProps
+>(({ className, variant, size, ...props }, ref) => {
+  return (
+    <Pressable
+      className={cn(
+        props.disabled && "opacity-50",
+        buttonVariants({ variant, size, className })
+      )}
+      ref={ref}
+      role="button"
+      {...props}
+    />
+  );
+});
+MobileButton.displayName = "MobileButton";
+
+export { Button, MobileButton, buttonVariants };
+export type { ButtonProps, MobileButtonProps };

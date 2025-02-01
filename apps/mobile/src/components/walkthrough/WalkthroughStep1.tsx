@@ -30,7 +30,7 @@ const WalkthroughStep1 = () => {
         }}
       />
 
-      <View className="px-12 pb-[99px] pt-12 gap-2">
+      <View className="px-12 pb-[99px] pt-2 gap-2">
         <Text className="font-interBold text-4xl text-primary text-center">
           Shop your way to a
         </Text>

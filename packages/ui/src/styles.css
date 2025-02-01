@@ -8,10 +8,10 @@
 
     --primary: #FFFFFF;
     --accent: #A164FF;
-    --secondary: rgba(255, 255, 255, 0.50);
-    --tertiary: rgba(255, 255, 255, 0.25);
+    --secondary: #ffffff80;
+    --tertiary: #ffffff40;
 
-    --tile: rgba(179, 119, 255, 0.20);
+    --tile: #b377ff33;
     --card: linear-gradient(90deg, rgba(163, 46, 255, 0.12) 0%, rgba(80, 70, 197, 0.12) 100%);
 
     --shopee-color: #EE4E2C;

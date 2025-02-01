@@ -8,20 +8,32 @@ import NotFlyingSoonSvg from "@/svg/NotFlyingSoonSvg";
 const WalkthroughStep3 = () => {
   const redemptionOptions: RedeemCardProps[] = [
     {
-      icon: <TransferMiliesSvg />,
+      icon: (
+        <View className="mx-2">
+          <TransferMiliesSvg />
+        </View>
+      ),
       title: "Transfer Miles",
       description: "25 Airline and Hotel Partners, No Fees, 1:1 Transfer Ratio",
       footer: "Best for Business & First Class",
     },
     {
-      icon: <FlyAndClaimSvg />,
+      icon: (
+        <View className="mx-2">
+          <FlyAndClaimSvg />
+        </View>
+      ),
       title: "Fly and Claim",
       description:
         "Upload your flight ticket, and get reimbursed within 5 days.",
       footer: "Best for Economy",
     },
     {
-      icon: <NotFlyingSoonSvg />,
+      icon: (
+        <View className="ml-4">
+          <NotFlyingSoonSvg />
+        </View>
+      ),
       title: "Not flying soon",
       description: "You can always redeem Gift Cards with your Max Miles.",
       footer: "Best for Starters",
