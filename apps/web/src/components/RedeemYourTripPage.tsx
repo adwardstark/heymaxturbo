@@ -32,10 +32,10 @@ function RedeemYourTripPage() {
       <div className="flex flex-row items-center pt-4">
         <div className="bg-accent h-[1px] w-[86%] ml-6" />
         <div className="bg-accent px-4 py-2 rounded-full shadow-md shadow-accent">
-          <span className="text-text-primary font-bold text-base">2</span>
+          <span className="text-primary font-bold text-base">2</span>
         </div>
       </div>
-      <h1 className="text-4xl text-text-primary font-bold px-6 pt-8 pb-4 text-right">
+      <h1 className="text-4xl text-primary font-bold px-6 pt-8 pb-4 text-right">
         Redeem your trip
       </h1>
       <div className="grid p-4">

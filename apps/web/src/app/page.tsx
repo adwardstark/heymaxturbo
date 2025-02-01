@@ -9,6 +9,7 @@ import ArrowRightSvg from "@/assets/svgs/ArrowRightSvg";
 import LandingPage from "@/components/LandingPage";
 import RedeemYourTripPage from "@/components/RedeemYourTripPage";
 import ChooseYourBrandsPage from "@/components/ChooseYourBrandsPage";
+import PageIndicator from "@/components/PageIndicator";
 
 export default function Home() {
   const swiperRef = useRef<Swiper | null>(null);
@@ -20,6 +21,7 @@ export default function Home() {
         <Button
           size="icon"
           onClick={() => swiperRef?.current?.slideNext()}
+          className="self-end justify-self-end"
         >
           <ArrowRightSvg />
         </Button>
@@ -28,14 +30,17 @@ export default function Home() {
 
     if (activeIndex === 2) {
       return (
-        <Button onClick={() => window.open("https://heymax.ai", "_blank")}>
+        <Button
+          onClick={() => window.open("https://heymax.ai", "_blank")}
+          className="self-end justify-self-end"
+        >
           Get started
         </Button>
       );
     }
 
     return (
-      <Button onClick={() => swiperRef?.current?.slideNext()}>
+      <Button onClick={() => swiperRef?.current?.slideNext()} className="self-end justify-self-end">
         See how it works <ArrowRightSvg height={16} width={16} className="ml-1" />
       </Button>
     );
@@ -62,7 +67,8 @@ export default function Home() {
       </Swiper>
 
       {/** Controls */}
-      <div className="row-span-1 py-8 self-end justify-self-end pr-12">
+      <div className="py-4 px-12 items-center flex justify-between">
+        <PageIndicator items={3} activeIndex={activeIndex} />
         {renderCTA()}
       </div>
     </div>

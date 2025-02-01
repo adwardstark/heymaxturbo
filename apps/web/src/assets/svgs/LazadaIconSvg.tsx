@@ -29,12 +29,12 @@ const LazdaIconSvg = (props) => (
         y2="0.18426"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#FFB900" />
-        <stop offset="0.338" stop-color="#F38000" />
-        <stop offset="0.567" stop-color="#F83C72" />
-        <stop offset="0.78" stop-color="#FC1CBE" />
-        <stop offset="0.93" stop-color="#FE08ED" />
-        <stop offset="1" stop-color="#FF00FF" />
+        <stop stopColor="#FFB900" />
+        <stop offset="0.338" stopColor="#F38000" />
+        <stop offset="0.567" stopColor="#F83C72" />
+        <stop offset="0.78" stopColor="#FC1CBE" />
+        <stop offset="0.93" stopColor="#FE08ED" />
+        <stop offset="1" stopColor="#FF00FF" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_4_673"
@@ -44,8 +44,8 @@ const LazdaIconSvg = (props) => (
         y2="3.21887"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EE0A3F" />
-        <stop offset="1" stop-color="#EE0A3F" stop-opacity="0" />
+        <stop stopColor="#EE0A3F" />
+        <stop offset="1" stopColor="#EE0A3F" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_4_673"
@@ -55,8 +55,8 @@ const LazdaIconSvg = (props) => (
         y2="3.58522"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#ED6600" />
-        <stop offset="1" stop-color="#F98200" />
+        <stop stopColor="#ED6600" />
+        <stop offset="1" stopColor="#F98200" />
       </linearGradient>
     </defs>
   </svg>
