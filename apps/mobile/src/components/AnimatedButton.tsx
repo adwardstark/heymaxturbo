@@ -8,7 +8,7 @@ import Animated, {
 } from "react-native-reanimated";
 import ArrowRightSvg from "@/svg/ArrowRightSvg";
 import * as WebBrowser from "expo-web-browser";
-import { MobileButton as Button } from "@package/ui/button";
+import { Button } from "@package/ui/button-mobile";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Button);
 
