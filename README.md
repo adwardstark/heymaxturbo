@@ -19,9 +19,12 @@ Both projects use **Typescript** & **Tailwindcss**, for mobile Tailwindcss is in
 
 - Mobile-apps see below:
   - iOS
-  [![Watch the iOS demo video](https://raw.githubusercontent.com/adwardstark/heymaxturbo/master/demos/HeyMaxiOSDemo.mp4)]
+  
+  https://github.com/user-attachments/assets/135413db-2189-4cdb-b0b7-e0ea6f184dcb
+
   - Android
-  [![Watch the Android demo video](https://raw.githubusercontent.com/adwardstark/heymaxturbo/master/demos/HeyMaxAndroidDemo.mp4)]
+
+  https://github.com/user-attachments/assets/cc0b1662-ccc6-47b0-80dd-d4bd2ffb0916
 
 ## Setup
 Setting up this repo is really simple, just follow these steps:
