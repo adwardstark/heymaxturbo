@@ -10,7 +10,9 @@ Both projects use **Typescript** & **Tailwindcss**, for mobile Tailwindcss is in
   | - web // Next.js project for the Web.
 
 - packages
-  | - ui // Shared components & styles to be used by both projects.
+  | - ui
+      | - src // Shared components, styles & utility to be used by both projects.
+      | - src/__test__ // Tests for button component
 ```
 
 ## Demo
@@ -33,25 +35,26 @@ Setting up this repo is really simple, just follow these steps:
     ```bash
     yarn install
     ```
-3. Build using turbo.
-   ```bash
-   turbo build
-   # if turbo-cli is not installed, use > yarn run build
-   ```
-4. Run the web app.
+3. Run the web app.
    ```bash
    turbo dev
    # if turbo-cli is not installed, use > yarn run dev
    ```
-5. Run Android app.
+4. Run Android app.
    ```bash
    cd apps/mobile
 
    yarn run android
    ```
-6. Run iOS app.
+5. Run iOS app.
    ```bash
    cd apps/mobile
 
    yarn run ios
+   ```
+6. Run unit tests
+   ```bash
+   cd packages/ui
+
+   yarn test
    ```
