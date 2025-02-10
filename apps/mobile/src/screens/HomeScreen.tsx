@@ -1,7 +1,5 @@
 import {
   FlatList,
-  StyleSheet,
-  Text,
   useWindowDimensions,
   View,
   ViewToken,
@@ -20,6 +18,7 @@ import WalkthroughStep2 from "@/components/walkthrough/WalkthroughStep2";
 import WalkthroughStep3 from "@/components/walkthrough/WalkthroughStep3";
 import PageIndicator from "@/components/PageIndicator";
 import { AnimatedButton } from "@/components/AnimatedButton";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
   const { width: SCREEN_WIDTH } = useWindowDimensions();
@@ -48,7 +47,7 @@ const HomeScreen = () => {
     },
   });
   return (
-    <View className="flex-1">
+    <SafeAreaView className="flex-1 bg-mobile-background">
       <Animated.FlatList
         ref={flatListRef as any}
         data={walkthroughSteps}
@@ -78,7 +77,7 @@ const HomeScreen = () => {
           dataLength={walkthroughSteps.length}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

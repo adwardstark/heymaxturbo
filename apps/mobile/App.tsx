@@ -5,8 +5,9 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import HomeScreen from "@/screens/HomeScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { NavigationContainer } from "@react-navigation/native";
+import RootStack from "@/navigation/Navigation";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -31,10 +32,10 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
-        <SafeAreaView className="flex-1 bg-mobile-background">
-          <HomeScreen />
-          <StatusBar style="light" />
-        </SafeAreaView>
+        <NavigationContainer>
+          <RootStack />
+        </NavigationContainer>
+        <StatusBar style="light" />
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );

@@ -9,6 +9,7 @@ import Animated, {
 import ArrowRightSvg from "@/svg/ArrowRightSvg";
 import * as WebBrowser from "expo-web-browser";
 import { Button } from "@package/ui/button-mobile";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Button);
 
@@ -23,6 +24,7 @@ export function AnimatedButton({
   flatListIndex,
   flatListRef,
 }: ButtonProps) {
+  const navigation = useNavigation<NavigationProp<any>>();
   const buttonAnimationStyle = useAnimatedStyle(() => {
     const isFirstScreen = flatListIndex.value === 0;
     const isLastScreen = flatListIndex.value === dataLength - 1;
@@ -80,7 +82,15 @@ export function AnimatedButton({
         index: flatListIndex.value + 1,
       });
     }
-    WebBrowser.openBrowserAsync("https://heymax.ai");
+    // WebBrowser.openBrowserAsync("https://heymax.ai", {
+    //   toolbarColor: "#130739",
+    //   enableDefaultShareMenuItem: false,
+    //   showTitle: false,
+    // });
+
+    navigation.navigate('WebViewScreen', {
+      url: 'https://heymax.ai',
+    })
   };
 
   return (
